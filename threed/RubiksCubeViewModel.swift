@@ -120,7 +120,7 @@ class RubiksCubeViewModel: ObservableObject {
                 switch face {
                 case .UP:
                     for i in 1...10 {
-                        DispatchQueue.main.async  {
+                        DispatchQueue.main.sync  {
                             self.rubiksCube.turnY(face: face, angleRad: angle, direction: direction)
                             if (i == 10) {
                                 self.turnlockCount -= 1
@@ -132,7 +132,7 @@ class RubiksCubeViewModel: ObservableObject {
                     }
                 case .DOWN:
                     for i in 1...10 {
-                        DispatchQueue.main.async  {
+                        DispatchQueue.main.sync  {
                             self.rubiksCube.turnY(face: face, angleRad: angle, direction: direction)
                             if (i == 10) {
                                 self.turnlockCount -= 1
@@ -144,7 +144,7 @@ class RubiksCubeViewModel: ObservableObject {
                     }
                 case .LEFT:
                     for i in 1...10 {
-                        DispatchQueue.main.async  {
+                        DispatchQueue.main.sync  {
                             self.rubiksCube.turnX(face: face, angleRad: angle, direction: direction)
                             if (i == 10) {
                                 self.turnlockCount -= 1
@@ -156,7 +156,7 @@ class RubiksCubeViewModel: ObservableObject {
                     }
                 case .RIGHT:
                     for i in 1...10 {
-                        DispatchQueue.main.async  {
+                        DispatchQueue.main.sync  {
                             self.rubiksCube.turnX(face: face, angleRad: angle, direction: direction)
                             if (i == 10) {
                                 self.turnlockCount -= 1
@@ -169,7 +169,7 @@ class RubiksCubeViewModel: ObservableObject {
 
                 case .FRONT:
                     for i in 1...10 {
-                        DispatchQueue.main.async  {
+                        DispatchQueue.main.sync  {
                             self.rubiksCube.turnZ(face: face, angleRad: angle, direction: direction)
                             if (i == 10) {
                                 self.turnlockCount -= 1
@@ -181,7 +181,7 @@ class RubiksCubeViewModel: ObservableObject {
                     }
                 case .BACK:
                     for i in 1...10 {
-                        DispatchQueue.main.async  {
+                        DispatchQueue.main.sync  {
                             self.rubiksCube.turnZ(face: face, angleRad: angle, direction: direction)
                             if (i == 10) {
                                 self.turnlockCount -= 1
